@@ -1,0 +1,23 @@
+.main {
+    margin-left: 50px;
+    margin-right: 50px;
+
+    h4, p{
+        text-align: center;
+    }
+
+    .right {
+        display: inline-block;
+        width:35%;
+    }
+
+    .left {
+        display:inline-block; 
+        width:50%;
+        text-align: right;
+    }
+    li {
+        border-bottom: 1px solid #eeeeee;
+        list-style: none;
+    }
+}

@@ -1,2 +1,1 @@
-# world-population-react-api
-World Population App
+#world-population-react-api

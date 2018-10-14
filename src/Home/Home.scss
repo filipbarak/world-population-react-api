@@ -1,0 +1,39 @@
+$color-left: #fcffdf;
+$color-right: #ffffda;
+$hover-left-color: #e1e7a7;
+$hover-rigth-color: #fafab5;
+
+.blockLeft{
+    background-color: $color-left;
+}
+.blockRight{
+    background-color: $color-right;
+}
+.blockRight, .blockLeft {
+    display: inline-block;
+    width:50%;
+}
+.blockLeft:hover {
+    background-color: $hover-left-color;
+}
+.blockRight:hover {
+    background-color: $hover-rigth-color;
+}
+
+.home {
+    text-align: center;
+
+    a {
+        display: block;
+        font-size: 30px;
+        display: inline-block;
+        height: 100vh;
+        margin-top: 35%;
+        text-decoration: none;
+        color:#786c43
+
+    }
+    span {
+        padding-left: 20px
+    }
+}
