@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 //imprt axios for the http calls
 import axios from 'axios';
 //import components here
-import SideNavBar from './SideNavBar/SideNavBar';
+import NavBar from './NavBar/NavBar';
 import Home from './Home/Home';
 import Reports from './Reports/Reports';
 import Dashboard from './Dashboard/Dashboard';
@@ -92,7 +92,7 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <div>
-          <SideNavBar />
+          <NavBar />
           
           <Switch>        
             <Route path="/" exact component={Home}></Route> 
