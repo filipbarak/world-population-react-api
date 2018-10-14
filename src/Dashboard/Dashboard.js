@@ -32,13 +32,14 @@ class Dashboard extends Component {
     }
       
     render () {
-        console.log(this.state)
+        //console.log(this.state)
         return (
             <div className="main">
                 <h4>Dashboard</h4> 
                 <div className="left-section">
                     <p>Did you know that some countries in the world are more populated than some of the continents?</p>
                     <p>On the chart are shown countries and regions in the world that have population between 500 million and 3 billion. </p>
+                    <p><span>Data from World Population API for today.</span></p>
                 </div>
                 <div className="right-section">             
                     <Pie data={this.state.chart} />

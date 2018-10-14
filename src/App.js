@@ -18,6 +18,11 @@ let countriesArray = [];
 let p =[];
 let moreMil50 = [];
 let moreMil50countries = [];
+let date = new Date();
+let year = date.getFullYear();
+let month = date.getMonth() + 1;
+let day = date.getDate();
+
 class App extends React.Component {
 
   //api for the population of a country on a given date
@@ -33,6 +38,7 @@ class App extends React.Component {
       mil50countries: []
     }  
     getCountries = () => {
+      console.log(year, month, day);
       //get the countries with axios
       axios.get(`http://api.population.io/1.0/population/countries/?format=json`)
       .then((res) => {
@@ -53,9 +59,9 @@ class App extends React.Component {
         //console.log(this.state)  
 
         // now, for ALL countries, pass the country name in the url to make multiple call
-        // and return the data for all countries for their population  
+        // and return the data for all countries for their population on the current date
         for (let i=0; i<this.state.countries.length; i++) {        
-        axios.get(`http://api.population.io/1.0/population/${this.state.countries[i]}/2018-02-02/?format=json`)
+        axios.get(`http://api.population.io/1.0/population/${this.state.countries[i]}/${year}-${month}-${day}?format=json`)
         .then(response => {
         //push the responce
         p.push(response.data.total_population.population);
